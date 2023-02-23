@@ -233,8 +233,8 @@ def yliluomas_1_ordered_dithering(image, palette, order=8):
 
     xxyy = list(zip(np.nditer(xx), np.nditer(yy)))
 
-    for i in clbar(range(len(xx)), name = "Palettizing", position = "first", prefixwidth = 12, suffixwidth = 28):
-        for n in range(len(yy)):
+    for i in clbar(range(ni.shape[0]), name = "Palettizing", position = "first", prefixwidth = 12, suffixwidth = 28):
+        for n in range(ni.shape[1]):
             x, y = xxyy[n * len(xx) + i]
             
             min_index = np.argmin(
